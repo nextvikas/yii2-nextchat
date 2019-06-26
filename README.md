@@ -47,9 +47,10 @@ http://localhost/path/to/index.php/nextchat
 
 
 Login details: 
+```
 username: user10000
 Password: 123qwe
-
+```
 
 You should see the below:
 
