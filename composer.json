@@ -2,7 +2,7 @@
     "name": "nextvikas/yii2-nextchat",
     "description": "A simple chat for your yii2 application",
     "type": "yii2-extension",
-    "keywords": ["yii2", "extension", "message", "chat", "conversation"],
+    "keywords": ["yii2", "extension", "message", "chat", "conversation", "yii2 chat", "online chat", "next chat", "next", "next-chat", "nextchat"],
     "license": "BSD-3-Clause",
     "authors": [
         {
