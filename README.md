@@ -11,7 +11,7 @@ composer require --prefer-dist "nextvikas/yii2-nextchat @dev"
 ```
 
 Once the extension is installed, simply modify your application configuration as follows:
-```
+```php
 'modules' => [
 
     ----------------
@@ -58,7 +58,7 @@ You should see the below:
 
 
 or if you want to use widget in another pages then please configuration as follows
-```
+```php
 <?php echo \nextvikas\nextchat\components\ChatWidget::widget() ?>
 ```
 ![yii next chat widget demo page](https://raw.githubusercontent.com/nextvikas/yii2-nextchat/master/widget.png "yii next chat widget demo page")
