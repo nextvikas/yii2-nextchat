@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
 use nextvikas\nextchat\assets\ChatAsset;
-ChatAsset::register($this);
+$assets = ChatAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -53,6 +53,7 @@ if(Yii::$app->controller->id=="chat"){
 <!-- Custom JavaScript Files Included Here -->
 
 <script type="text/javascript">
+var localbase = "<?=$assets->baseUrl; ?>";
 var base = "<?=Url::to(['/nextchat']); ?>/";
 var ubase = "<?=Yii::$app->homeUrl; ?>";
 var imgpath = "<?=Yii::$app->homeUrl; ?>uploads/chat/";

@@ -1,14 +1,16 @@
 <?php
 use yii\helpers\Url;
 use nextvikas\nextchat\assets\ChatwidgetAsset;
-ChatwidgetAsset::register($this);
+$assets = ChatwidgetAsset::register($this);
 
 
 $baseurl = Url::to(['/nextchat']);
+$localbase = $assets->baseUrl;
 ?>
 
 <?php
 $script = <<< JS
+	var localbase = '$localbase';
 	var base = '$baseurl/'; 
 	var imgpath = 'uploads/chat/';
 JS;

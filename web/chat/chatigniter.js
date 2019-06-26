@@ -268,7 +268,7 @@ if(user==19999){
             </a>\
         </li>\
     </ul>\
-											<img class=\"user-img\" src=\"/account/profileimg/user.jpg\">\
+											<img class=\"user-img\" src=\""+localbase+"/chat/images/no_img.jpg\">\
 											<div class=\"chat-middle\"><span class=\"display-name\"></span>\
 											<div class=\"chat-line\">Loading....</div>\
 											</div><span class=\"tinyMsgCount\"></span>\
@@ -300,7 +300,7 @@ if(user==19999){
 												<i class=\"fa fa-minus\"></i>\
 											</a><a href=\"javascript: void(0);\" class=\"chat-box-full pull-right dochat\">\
 												<i class=\"fa fa-expand\"></i>\
-											</a><img class=\"user-img\" src=\"/account/profileimg/user.jpg\">\
+											</a><img class=\"user-img\" src=\""+localbase+"/chat/images/no_img.jpg\">\
 											<div class=\"chat-middle\"><span class=\"display-name\"></span>\
 											<div class=\"chat-line\">Loading....</div>\
 											</div><span class=\"tinyMsgCount\"></span>\
