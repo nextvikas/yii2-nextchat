@@ -61,4 +61,4 @@ or if you want to use widget in another pages then please configuration as follo
 ```
 <?php echo \nextvikas\nextchat\components\ChatWidget::widget() ?>
 ```
-
+![yii next chat widget demo page](https://raw.githubusercontent.com/nextvikas/yii2-nextchat/master/widget.png "yii next chat widget demo page")
