@@ -352,7 +352,7 @@ body {
     background: #ffffff;
 }
 #new-chat-container .chat-box {
-    background-color: green;
+    background-color: #DFDFE9;
     display: none;
 	background-image: url("./images/chat-wallpaper-original.jpg");
 	background-position: center top;
