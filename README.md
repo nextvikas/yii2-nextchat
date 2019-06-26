@@ -44,3 +44,7 @@ or if you have enabled pretty URLs, you may use the following URL:
 ```
 http://localhost/path/to/index.php/nextchat
 ```
+You should see the below:
+
+![yii next chat demo page](https://raw.githubusercontent.com/nextvikas/yii2-nextchat/master/nextchat.png "yii next chat demo page")
+
