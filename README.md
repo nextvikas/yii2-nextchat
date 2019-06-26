@@ -57,4 +57,8 @@ You should see the below:
 ![yii next chat demo page](https://raw.githubusercontent.com/nextvikas/yii2-nextchat/master/nextchat.png "yii next chat demo page")
 
 
+or if you want to use widget in another pages then please configuration as follows
+```
+<?php echo \nextvikas\nextchat\components\ChatWidget::widget() ?>
+```
 
