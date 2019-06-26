@@ -4,7 +4,9 @@ body {
     height: 100%;
 }
 
-
+._pedg {
+    margin: 7px 20px;
+}
 .chat-box.mob {
     z-index: 99999 !important;
 }
@@ -174,6 +176,7 @@ body {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
+    float: right;
 }
 .chat-container .chat-group > a .badge.is-hidden {
     -webkit-opacity: 0;
@@ -371,7 +374,7 @@ body {
 	#new-chat-container .chat-box {
 		position: fixed;
 		right: 280px;
-		width: 300px;
+		width: 290px;
 		height: inherit;
 		z-index: 99999;
 	}
@@ -689,7 +692,7 @@ body {
 }
 .image-upload {
     background: #fff none repeat scroll 0% 0%;
-    width: 85%;
+    width: calc(100% - 50px);
     float: left;
 	padding: 5px;
 	border-radius: 5px;
@@ -798,11 +801,10 @@ body {
 }
 .sendchat {
     border-radius: 50%;
-    padding: 11px;
-    padding-right: 14px;
+    padding: 8px 12px;
     float: right;
-    padding-left: 10px;
     background: #075E54;
+    margin: 2px 3px;
 }
 .sendchat > i{
     color: #fff;

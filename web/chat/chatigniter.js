@@ -176,7 +176,7 @@ function someCallback(exifObject,id) {
 var checkismob=false;
 $(document).on('click', '.chatover[data-toggle="popover"]', function(){ 
 		var $the=$(this); 
-		$('#chat-container').toggle();
+		//$('#chat-container').toggle();
 		user = $the.find('input[name="user_id"]').val();
 		
 		if($the.hasClass('user')){
@@ -298,6 +298,8 @@ if(user==19999){
 											</a>\
 											<a href=\"javascript: void(0);\" class=\"chat-box-mini pull-right\">\
 												<i class=\"fa fa-minus\"></i>\
+											</a><a href=\"javascript: void(0);\" class=\"chat-box-full pull-right dochat\">\
+												<i class=\"fa fa-expand\"></i>\
 											</a><img class=\"user-img\" src=\"/account/profileimg/user.jpg\">\
 											<div class=\"chat-middle\"><span class=\"display-name\"></span>\
 											<div class=\"chat-line\">Loading....</div>\
@@ -395,10 +397,10 @@ if(user==19999){
 		if(checkismob)
 		 var right = 0;
 	 else 
-		 var right = 290;
+		 var right = 300;
 	   
 		var iii = 0;
-		var jsnsj=parseInt(chatBoxes.length*320)+290;
+		var jsnsj=parseInt(chatBoxes.length*320)+300;
 		//alert($(window).width()+","+jsnsj);
 		if($(window).width()<jsnsj){
 			$("#new-chat-container").find(".chat-box.pc:last").remove();
@@ -437,9 +439,10 @@ $(window).resize(function(){
 
 var winchatsize=function(){
 	if(urlvar=="chat" && typeof user != 'undefined'){
-		var cheight=$(document).height()-110;
+		//var cheight=$(document).height()-110;
+		var cheight = 500;
 		$('#chat-box-'+user+' .chat-box-body').css({'height': cheight+'px'});
-		$('#new-chat-container').css({'height': '108px'});
+		//$('#new-chat-container').css({'height': '108px'});
 	}
 }
 
@@ -760,9 +763,9 @@ function restructureChatBoxes() {
 
 		if($("#"+chatboxID).is(':visible')){
 			if (align == 0) {
-				$("#"+chatboxID).css('right', '290px');
+				$("#"+chatboxID).css('right', '300px');
 			} else {
-				width = (align)*(290+20)+300;
+				width = (align)*(300+20)+300;
 				$("#"+chatboxID).css('right', width+'px');
 			}
 			align++;

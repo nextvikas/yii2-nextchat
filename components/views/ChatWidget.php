@@ -1,25 +1,41 @@
 <?php
-use frontend\modules\chat\assets\ChatwidgetAsset;
+use yii\helpers\Url;
+use nextvikas\nextchat\assets\ChatwidgetAsset;
 ChatwidgetAsset::register($this);
-?>
 
-<a class="hangout" id="Msgc" href="javascript:">chat</a> 
+
+$baseurl = Url::to(['/nextchat']);
+?>
 
 <?php
 $script = <<< JS
-	var base = 'chat/'; 
+	var base = '$baseurl/'; 
 	var imgpath = 'uploads/chat/';
-	$(document).on("click",".hangout",function(){
-	    $('#chat-container').toggle();
-	})
 JS;
 $this->registerJs($script,\yii\web\View::POS_BEGIN);
 
 
 $style= <<< CSS
-
+#Msgc {
+	/* text-align: right; */
+	/* float: unset; */
+	/* position: relative; */
+	/* right: 0; */
+	width: 300px;
+	display: inline-block;
+	text-align: right;
+}
 .chat-container {
 	width: 290px;
+}
+#chat-container {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+}
+.chat-container .chat-inner {
+	background: #fff;
 }
 
 

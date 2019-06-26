@@ -112,14 +112,14 @@ $(document).on('click', '#login', function(){
         var Username = $('#Username').val();
         var Password = $('#Password').val();
 
-		Password = CryptoJS.SHA512(Password).toString();
+        Password = CryptoJS.SHA512(Password).toString();
         $.ajax({
             type: "POST",
             url: base  + "chat/auth",
-			data: {
-				username: Username,
-				password: Password
-			},
+            data: {
+                username: Username,
+                password: Password
+            },
             cache: false,
             beforeSend: function(){
              $("#login").html('<img src="assets/images/ajax-loader.gif" /> Connecting...');
@@ -166,10 +166,10 @@ $(document).on('click', '#logout', function(){
 /*----------------------------------------------------------------------
 | Close the chat container
 ------------------------------------------------------------------------*/
-/*$(document).on('click', '.chat-form-close', function(){	
-	if($("#chat-container").css("display")!='none'){				
-		restructureChatBoxesRightRemove();	
-	}
+/*$(document).on('click', '.chat-form-close', function(){   
+    if($("#chat-container").css("display")!='none'){                
+        restructureChatBoxesRightRemove();  
+    }
     $('#chat-container').toggle('slide', {
         direction: 'right'
     }, 500);
@@ -186,12 +186,12 @@ $(document).on('click', '#logout', function(){
 }); */
 
 $(document).on('click','.mob .chat-box-close', function(){
-	var chatboxid = $(this).parent().parent().attr("id");
-	$('#'+chatboxid).remove();
-	// $('#_atssh').nextAll().show();
-	// $('#chat-container').toggle('slide', {
-	// 	direction: 'right'
-	// }, 500);
+    var chatboxid = $(this).parent().parent().attr("id");
+    $('#'+chatboxid).remove();
+    // $('#_atssh').nextAll().show();
+    // $('#chat-container').toggle('slide', {
+    //  direction: 'right'
+    // }, 500);
 });
 
 $(document).on('click','.pc .chat-box-mysetting', function(){
@@ -200,30 +200,39 @@ $(document).on('click','.pc .chat-box-mysetting', function(){
 
 
 
+$(document).on('click','.mob .dochat', function(){
+    $('.chat-box.mob').css({'position': 'fixed'});
+    $(this).addClass('relative');
+});
+$(document).on('click','.mob .relative', function(){
+    $('.chat-box.mob').css({'position': 'relative'});
+    $(this).removeClass('relative');
+});
+
 $(document).on('click','.pc .chat-box-close', function(){
-	var chatboxid = $(this).parent().parent().attr("id");
-	$('#'+chatboxid).remove();
-	restructureChatBoxes();
+    var chatboxid = $(this).parent().parent().attr("id");
+    $('#'+chatboxid).remove();
+    restructureChatBoxes();
 });
 $(document).on('click','.main-box-mini,.dochattoggle', function(){
-	// if($("#chat-inner").css("display")=='none'){				
-	// 	$('.main-box-mini').html('<i class="fa fa-minus" style="color: rgb(255, 255, 255);"></i>');
-	// } else {
-	// 	$('.main-box-mini').html('<i class="fa fa-plus" style="color: rgb(255, 255, 255);"></i>');
-	// }
+    // if($("#chat-inner").css("display")=='none'){             
+    //  $('.main-box-mini').html('<i class="fa fa-minus" style="color: rgb(255, 255, 255);"></i>');
+    // } else {
+    //  $('.main-box-mini').html('<i class="fa fa-plus" style="color: rgb(255, 255, 255);"></i>');
+    // }
 
     $('#chat-container').toggle();
 
-	//var chatboxid = $("#chat-inner").toggle();
+    //var chatboxid = $("#chat-inner").toggle();
 });
 
 /*----------------------------------------------------------------------
 | Display the chat container
 ------------------------------------------------------------------------*/
-/*$('.btn-chat').click(function () {	
-	if($("#chat-container").css("display")=='none'){				
-		restructureChatBoxes();	
-	}
+/*$('.btn-chat').click(function () {    
+    if($("#chat-container").css("display")=='none'){                
+        restructureChatBoxes(); 
+    }
     if($('#chat-box').is(':visible')){
         $('#chat-container').toggle('slide', {
             direction: 'right'
@@ -352,7 +361,7 @@ $(document).on("submit", "#profile-frm", function(e)
                 else{
                     $(".message").html(success(response.message));
                     $( "#chat-inner" ).load( base+"users/editProfile/");
-					window.location.reload();
+                    window.location.reload();
                 }
             }
             else
@@ -379,18 +388,18 @@ $(document).on('submit', '#changepassword-frm', function(){
         var anew_password = $('#changepassword-frm [name="new_password"]').val();
         var aconfirm_newpassword = $('#changepassword-frm [name="confirm_newpassword"]').val();
 
-		acurrent_password = CryptoJS.SHA512(acurrent_password).toString();
-		anew_password = CryptoJS.SHA512(anew_password).toString();
-		aconfirm_newpassword = CryptoJS.SHA512(aconfirm_newpassword).toString();
+        acurrent_password = CryptoJS.SHA512(acurrent_password).toString();
+        anew_password = CryptoJS.SHA512(anew_password).toString();
+        aconfirm_newpassword = CryptoJS.SHA512(aconfirm_newpassword).toString();
 
         $.ajax({
             type: "POST",
             url: base  + "users/changePassword",
             data: {
-				current_password: acurrent_password,
-				new_password: anew_password,
-				confirm_newpassword: aconfirm_newpassword
-			},
+                current_password: acurrent_password,
+                new_password: anew_password,
+                confirm_newpassword: aconfirm_newpassword
+            },
             cache: false,
             beforeSend: function(){
              $("#update-password").html('<img src="assets/images/ajax-loader.gif" /> Connecting...');

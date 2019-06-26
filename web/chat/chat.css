@@ -4,7 +4,9 @@ body {
     height: 100%;
 }
 
-
+._pedg {
+    margin: 10px 15px;
+}
 .chat-box.mob {
     z-index: 99999 !important;
 }
@@ -76,7 +78,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: #ffffff;
-    z-index: 9999;
+    /*z-index: 9999;*/
     display:block !important;
 }/* 
 .chat-container {
@@ -95,11 +97,12 @@ body {
     min-height: 0 !important;
 	overflow:auto;
     border-left: 1px solid #495d7f;
-	width: 250px;
-	z-index: 99999;
+	width: auto;
+	/*z-index: 99999;*/
 	/* height: 400px; */
 	top: auto;
 	min-width: 267px;
+    float: left;
 }
 #chat-container .user-status {
     display: inline-block;
@@ -131,7 +134,7 @@ body {
     /*border-left: 1px solid #bbbcc0;*/
 	float: left;
 	width: 100%;
-	height: 400px;
+	height: 564px;
 }
 #chat-container .chat-header {
     font-size: 16px;
@@ -354,7 +357,7 @@ body {
 	background-image: url("./images/chat-wallpaper-original.jpg");
 	background-position: center top;
 	background-repeat: repeat;
-	position: fixed;
+	/*position: fixed;*/
 	right: 0px;
 	width: 100%;
 	height: 100%;
@@ -367,16 +370,18 @@ body {
 .dochat{
 	display:block;
 }
+@media (max-width:700px){
+    #chat-container.fixed {
+        width: 100%;
+    }
+    #new-chat-container .chat-box {
+        margin-top: 660px;
+    }
+}
 @media (min-width:700px){
 
-    /*#chat-container.fixed {
-        width: 267px;
-    }*/
-
-
-
 	#new-chat-container .chat-box {
-		position: fixed;
+		/*position: fixed;*/
 		right: 0 !important;
 		width: auto;
         left: 267px;
@@ -583,7 +588,7 @@ body {
     font-size: 12px;
 }
 .chat-header .dropdown-menu {
-    left: 25px;
+    left: -20px;
     font-size: 18px;
     width: 180px;
 }
@@ -680,7 +685,7 @@ body {
 .chatbb {
     float: left;
     height: 29px;
-    width: 88%;
+    width: calc(100% - 30px) !important;
     border: none;
     box-shadow: none !important;
     padding: 0px 5px;
@@ -702,7 +707,7 @@ body {
 }
 .image-upload {
     background: #fff none repeat scroll 0% 0%;
-    width: 85%;
+    width: calc(100% - 50px);
     float: left;
 	padding: 5px;
 	border-radius: 5px;
@@ -834,7 +839,7 @@ body {
 
 
 #chat-inner > .chat-group {
-    height: 300px;
+    /*height: 300px;*/
     overflow: auto;
 }
 
@@ -868,7 +873,7 @@ a.find_ancker:hover, a.find_ancker:focus {
 }
 .image-upload label{
 	float: right;
-	margin-right: 5px;
+	margin: 4px 7px;
 }
 .newmsg {
     background-color: red !important;
