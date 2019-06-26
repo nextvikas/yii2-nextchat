@@ -9,15 +9,15 @@ class ChatAsset extends AssetBundle {
 
     // List of CSS files that this bundle contains
     public $css = [
-    	'css/bootstrap.min.css',
+    	'css/bootstrap.css',
     	'chat/chat.css',
     	'css/font-awesome.min.css',
     ];
     public $js = [
     	'chat/cust.js',
-    	['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'],
+    	['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js'],
     	'chat/jquery-ui.js',
-    	'js/bootstrap.min.js',
+    	'js/bootstrap.js',
     	'chat/filereader.js',
     	'chat/date.js',
     	'chat/main.js',
