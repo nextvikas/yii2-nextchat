@@ -18,6 +18,7 @@ class m211121_105223_user_table extends Migration
     public function up()
     {
     	$usertable = self::TABLE_USER;
+	$this->execute("ALTER TABLE `{$usertable}` DROP `online`;");
         $this->execute("ALTER TABLE `{$usertable}` ADD `online` INT NOT NULL DEFAULT '0';");
 		$this->insert($usertable,array(
 		         'id'=>'10000',
