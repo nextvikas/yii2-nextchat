@@ -5,7 +5,7 @@ use nextvikas\nextchat\migrations\Migration;
 /**
  * Class m151121_105223_user_table
  *
- * @author vikas pandey
+ * @author Vikas Pandey
  * @since 1.0
  */
 class m211121_105223_user_table extends Migration
