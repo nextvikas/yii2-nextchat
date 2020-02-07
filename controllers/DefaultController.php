@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\chat\controllers;
+namespace nextvikas\nextchat\controllers;
 
 use yii\web\Controller;
 
