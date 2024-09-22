@@ -1,3 +1,8 @@
+# yii2-nextchat 
+
+[![Total Downloads](https://img.shields.io/packagist/dt/nextvikas/yii2-nextchat.svg?logo=github&logoColor=white&style=flat-square)](https://packagist.org/packages/nextvikas/yii2-nextchat)
+[![GitHub tag](https://img.shields.io/badge/composer-yii2--extension-orange.svg)]()
+
 # Installation
 Add to composer.json
 
